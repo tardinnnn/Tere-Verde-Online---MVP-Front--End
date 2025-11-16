@@ -1,3 +1,152 @@
-h1{
-    color: #271aba;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, Arial, sans-serif;
 }
+
+body{
+    background-color: #fff;
+}
+
+.caixa-rolagem{
+    width: 100%;
+    height: 400px;
+
+    /* Apenas rolagem vertical */
+    overflow-y: scroll;
+}
+
+.navbar-container {
+  width: 100%; 
+  height: 175px;                   
+  background-color: #12531a;      
+  position: fixed;                
+  top: 0;                         
+  z-index: 1000;                 
+  border-bottom: 1px solid #eee;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.2); 
+}
+
+.navbar-items {
+    list-style: none;
+    padding: 0; 
+    margin: 0;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+
+.navbar-items li {
+    margin-left: 0; 
+}
+
+nav {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center; 
+    padding: 25px 25px; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+.logo{
+    width: 8vw;
+    height: auto;
+    mix-blend-mode: screen;
+}
+
+h2{
+    color: white;
+    padding: 0px 50px 0px 0px ;
+    margin: 0;
+    font-size: 3vw;
+}
+
+.admin-button,
+.contatos-button {
+    background-color: #2d2f26;
+    color: white; 
+    text-decoration: none; 
+    padding: 15px 25px; 
+    display: inline-block; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease;
+    opacity: 70%;
+}
+
+.admin-button:hover,
+.contatos-button:hover {
+    background-color: #1e7e34; 
+}
+
+.login-button{
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    padding: 15px 25px;    
+    display: inline-block;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+}
+
+.login-button:hover{
+    background-color: #1e7e34;
+}
+
+.eventos-button {
+    position: absolute;
+    bottom: 90px;          
+    left: 50%;
+    transform: translateX(-50%); 
+    background-color: #28a745;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: 0.3s;
+    padding: 1rem 3rem;    
+    font-size: 1.5rem;  
+}
+
+.eventos-button:hover{
+    background-color: #1e7e34;
+}
+
+
+.img-initial{
+    
+    width: 100%;
+    height: auto;
+    position: center;
+    border-radius: 5px;
+    padding-top: 200px;
+    font-size: 2vw;
+    filter: saturate(60%);
+    max-width: 100%;
+}
+
+
+.main-banner {
+    max-width: 80%; 
+    margin: 0 auto; 
+    padding: 20px 0; 
+    position: relative;
+}
+
+footer {
+    bottom: 0; 
+    left: 0; 
+    right: 0; 
+    background-color: #12531a; 
+    color: white;         
+    padding: 15px 0;     
+    text-align: center;  
+    z-index: 1000;
+}
+
+
