@@ -6,6 +6,9 @@
 }
 
 body{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
     background-color: white;
 }
 
@@ -72,14 +75,75 @@ h2{
     background-color: #1e7e34;
 }
 
+
+
+.login-box {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+    width: 350px; 
+    max-width: 90%;
+    margin-top: 50px; 
+    margin-bottom: 50px;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 17vw ;
+    
+}
+
+.login-box h3 {
+    text-align: center;
+    color: #00796b;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+
+.login-box div {
+    margin-bottom: 20px;
+}
+
+.login-box label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+}
+
+
+.submit-btn {
+    width: 100%;
+    background-color: #28a745;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #1e7e34;
+}
 footer {
     bottom: 0; 
     left: 0; 
     right: 0; 
-    background-color: #12531a; /* Cor de fundo escura */
-    color: white;         /* Cor do texto clara */
-    padding: 15px 0;      /* Espaçamento interno */
-    text-align: center;   /* Centraliza o texto */
+    background-color: #12531a;
+    color: white;    
+    padding: 15px 0;     
+    text-align: center;   
     z-index: 1000;
     position: fixed;
 }
