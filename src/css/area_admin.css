@@ -1,21 +1,21 @@
-
+/* RESET E CONFIGURAÇÕES GERAIS */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Helvetica, Arial, sans-serif;
+
 }
 
 body{
     background-color: white;
 }
 
-.caixa-rolagem{
-    width: 100%;
-    height: 400px;
-    overflow-y: scroll;
-}
 
+
+/* ==========================================
+   NAVBAR
+   ========================================== */
 .navbar-container {
   width: 100%;                    
   background-color: #12531a;      
@@ -34,6 +34,7 @@ body{
     gap: 30px;
     align-items: center;
 }
+
 nav {
     display: flex; 
     justify-content: space-between;
@@ -42,20 +43,18 @@ nav {
     max-width: 1200px; 
     margin: 0 auto; 
 }
+
 .logo{
     width: 8vw;
-    height: auto;
     mix-blend-mode: screen;
-
 }
 
 h2{
     color: white;
-    padding: 0px 50px 0px 0px ;
+    padding: 0px 50px 0px 0px;
     margin: 0;
     font-size: 3vw;
 }
-
 
 .home-button{
     background-color: #28a745;
@@ -72,6 +71,7 @@ h2{
 .home-button:hover{
     background-color: #1e7e34;
 }
+
 
 footer {
     bottom: 0; 
@@ -90,49 +90,33 @@ footer {
     --light-green: rgb(224, 255, 224);
     --text-color: #333;
     --border-color: #ccc;
-    --publish-blue: rgb(55, 137, 206);
 }
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-}
-
 
 .content-area {
     background-color: var(--light-green);
-    padding: 30px 50px;
-    min-height: 80vh; 
     padding: 13vw;
+    min-height: 80vh; 
 }
-
 
 .event-form-container h1 {
     margin-bottom: 20px;
 }
 
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    display: flex;
 }
 
 .form-group label {
-    font-weight: bold; 
-    margin-right: 5px; 
-}
-
-.form-group label, 
-.form-group input[type="text"] {
-    display: inline-block; 
+    font-weight: bold;
+    margin-right: 5px;
 }
 
 .form-group input[type="text"] {
     padding: 5px;
     border: 1px solid var(--border-color);
-    width: 300px; 
+    width: 300px;
 }
-
 
 .inline-group {
     display: flex;
@@ -141,24 +125,18 @@ footer {
 }
 
 .date-input {
-    width: 40px !important; 
+    width: 40px !important;
     text-align: center;
 }
 
 .date-input:last-child {
-    width: 60px !important; 
+    width: 60px !important;
 }
 
 .time-input {
-    width: 30px !important; 
+    width: 30px !important;
     text-align: center;
 }
-
-.form-group {
-    margin-bottom: 20px;
-    display: flex;
-}
-
 
 .description-area {
     margin-top: 20px;
@@ -168,26 +146,64 @@ footer {
     width: 100%;
     height: 150px;
     border: 1px solid var(--border-color);
-    background-color: #f0f0f0; 
+    background-color: #f0f0f0;
     resize: vertical;
     padding: 10px;
-    margin-top: 5px; 
 }
-
 
 .publish-container {
-    text-align: right; 
+    text-align: right;
     margin-top: 15px;
 }
-
 
 .publish-btn{
     background-color: #28a745;
     color: white;
+    padding: 15px 25px;
     text-decoration: none;
-    padding: 15px 25px;    
-    display: inline-block;
     border-radius: 4px;
     cursor: pointer; 
 }
 
+
+
+
+@media (max-width: 1000px) {
+    h2{
+        font-size: 18px;
+        margin: 20px;
+        align-items: center;
+      
+    }
+
+.content-area {
+    /* 1. Largura definida (ex: 90% da tela) */
+    width: 90%; 
+    
+    /* 2. Centralização Horizontal (Ajuste Crítico) */
+    /* top/bottom (0) | left/right (auto) - Centraliza o bloco na horizontal */
+    margin: 0 auto; 
+    
+    /* 3. Margem de Compensação da Navbar (Ajuste o valor conforme a altura da sua navbar) */
+    /* Substitui 'margin-top: 40%;' que é excessivo e não responsivo */
+    margin-top: 180px; 
+    
+    /* 4. Espaçamento Interno (Padding) */
+    padding: 20px; /* Padding interno uniforme (use px ou %) */
+    
+    /* Outros Estilos */
+    min-height: 40vh;
+    font-size: 90%;
+    background-color: var(--light-green);
+}
+
+    .publish-btn{
+        padding: 1.5%;
+    }
+
+    .home-button{
+        margin: 30px auto;
+        padding: 15px 25px ;
+        display: block;
+    }
+}

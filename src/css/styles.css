@@ -53,8 +53,8 @@ nav {
 h2{
     color: white;
     padding: 0px 50px 0px 0px ;
-    margin: 0;
-    font-size: 3vw;
+    margin: 3%;
+    font-size: 2vw;
 }
 
 .admin-button,
@@ -64,11 +64,13 @@ h2{
     color: white; 
     text-decoration: none; 
     padding: 15px 25px; 
-    display: inline-block; 
+    display: flex; 
     border-radius: 4px; 
     cursor: pointer; 
     transition: background-color 0.3s ease;
     opacity: 70%;
+    flex-wrap: wrap;
+    
 }
 
 .admin-button:hover,
@@ -128,8 +130,8 @@ footer {
 }
 
 .slider-box img {
-    width: 80%;
-    max-height: 260px;
+    width: 95%; /* Aumentado o uso do espaço interno */
+    max-height: 220px; /* Reduzido o max-height para melhor visualização */
     object-fit: cover;
     border-radius: 12px;
     margin-bottom: 15px;
@@ -137,11 +139,11 @@ footer {
 
 .slider-box h2 {
     margin-bottom: 10px;
-    font-size: 24px;
+    font-size: clamp(18px, 4vw, 24px); /* Título interno com clamp */
 }
 
 .slider-box p {
-    font-size: 16px;
+    font-size: clamp(14px, 3vw, 16px); /* Texto interno com clamp */
     line-height: 1.5;
 }
 
@@ -152,11 +154,12 @@ footer {
     background: black;
     color: white;
     border: none;
-    padding: 12px 16px;
+    padding: 8px 12px;
     cursor: pointer;
-    font-size: 24px;
+    font-size: 20px;
     border-radius: 50%;
     opacity: 0.8;
+    z-index: 10;
 }
 
 .arrow:hover {

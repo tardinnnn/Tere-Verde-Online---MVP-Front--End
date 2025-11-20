@@ -88,7 +88,7 @@ h2{
     margin-bottom: 50px;
     align-items: center;
     margin: 0 auto;
-    margin-top: 17vw ;
+    margin-top: 20vw ;
 }
 
 .login-box h3 {
@@ -145,4 +145,41 @@ footer {
     text-align: center;  
     z-index: 1000;
     position: fixed;
+}
+
+/* AJUSTES ESPECÍFICOS PARA TELAS MENORES QUE 500PX (Mobile) */
+@media (max-width: 600px) {
+    
+    .login-box {
+        /* 1. Reduz o padding para que o box não fique muito grande */
+        padding: 100px; 
+        
+        /* 2. Corrige a margem superior para ser mais razoável em telas pequenas */
+        /* Usa uma unidade fixa (px) ou uma unidade vw menor */
+        margin-top: 60px; 
+        
+        /* Garante que o box use a largura total permitida */
+        width: 100%; 
+        max-width: 95%; /* Ajusta para usar quase a tela toda, mas com uma pequena margem */
+    }
+
+    /* 3. Reduz o tamanho da fonte para o título para caber melhor */
+    .login-box h3 {
+        font-size: 1.5em; /* Reduz de 2em (aproximadamente) para 1.5em */
+        margin-bottom: 25px;
+    }
+
+    /* 4. Reduz o padding do botão de submit */
+    .submit-btn {
+        padding: 10px;
+        font-size: 1em;
+    }
+
+    .home-button{
+        padding: 13px;
+}
+    h2{
+        font-size: 5vw;
+        padding: 20px ;
+    }
 }
