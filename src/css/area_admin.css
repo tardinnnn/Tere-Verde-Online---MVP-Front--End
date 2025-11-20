@@ -177,21 +177,11 @@ footer {
     }
 
 .content-area {
-    /* 1. Largura definida (ex: 90% da tela) */
+
     width: 90%; 
-    
-    /* 2. Centralização Horizontal (Ajuste Crítico) */
-    /* top/bottom (0) | left/right (auto) - Centraliza o bloco na horizontal */
     margin: 0 auto; 
-    
-    /* 3. Margem de Compensação da Navbar (Ajuste o valor conforme a altura da sua navbar) */
-    /* Substitui 'margin-top: 40%;' que é excessivo e não responsivo */
     margin-top: 180px; 
-    
-    /* 4. Espaçamento Interno (Padding) */
-    padding: 20px; /* Padding interno uniforme (use px ou %) */
-    
-    /* Outros Estilos */
+    padding: 20px; 
     min-height: 40vh;
     font-size: 90%;
     background-color: var(--light-green);
