@@ -1,3 +1,4 @@
+
 *{
     margin: 0;
     padding: 0;
@@ -76,10 +77,17 @@ footer {
     bottom: 0; 
     left: 0; 
     right: 0; 
-    background-color: #12531a; /* Cor de fundo escura */
-    color: white;         /* Cor do texto clara */
-    padding: 15px 0;      /* Espaçamento interno */
-    text-align: center;   /* Centraliza o texto */
-    z-index: 1000;
+    background-color: #12531a; 
+    color: white;   
+    padding: 15px 0;     
+    text-align: center;   
     position: fixed;
+}
+
+h3{
+    color: #12531a;
+    text-align: center;
+    height: 8vw;
+    width: 0 auto;
+    font-size: 3vw;
 }

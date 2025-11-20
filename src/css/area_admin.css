@@ -1,3 +1,4 @@
+
 *{
     margin: 0;
     padding: 0;
@@ -76,10 +77,117 @@ footer {
     bottom: 0; 
     left: 0; 
     right: 0; 
-    background-color: #12531a; /* Cor de fundo escura */
-    color: white;         /* Cor do texto clara */
-    padding: 15px 0;      /* Espaçamento interno */
-    text-align: center;   /* Centraliza o texto */
+    background-color: #12531a; 
+    color: white;        
+    padding: 15px 0;     
+    text-align: center;   
     z-index: 1000;
     position: fixed;
 }
+
+
+:root {
+    --light-green: rgb(224, 255, 224);
+    --text-color: #333;
+    --border-color: #ccc;
+    --publish-blue: rgb(55, 137, 206);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+.content-area {
+    background-color: var(--light-green);
+    padding: 30px 50px;
+    min-height: 80vh; 
+    padding: 13vw;
+}
+
+
+.event-form-container h1 {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-weight: bold; 
+    margin-right: 5px; 
+}
+
+.form-group label, 
+.form-group input[type="text"] {
+    display: inline-block; 
+}
+
+.form-group input[type="text"] {
+    padding: 5px;
+    border: 1px solid var(--border-color);
+    width: 300px; 
+}
+
+
+.inline-group {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.date-input {
+    width: 40px !important; 
+    text-align: center;
+}
+
+.date-input:last-child {
+    width: 60px !important; 
+}
+
+.time-input {
+    width: 30px !important; 
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+}
+
+
+.description-area {
+    margin-top: 20px;
+}
+
+.description-area textarea {
+    width: 100%;
+    height: 150px;
+    border: 1px solid var(--border-color);
+    background-color: #f0f0f0; 
+    resize: vertical;
+    padding: 10px;
+    margin-top: 5px; 
+}
+
+
+.publish-container {
+    text-align: right; 
+    margin-top: 15px;
+}
+
+
+.publish-btn{
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    padding: 15px 25px;    
+    display: inline-block;
+    border-radius: 4px;
+    cursor: pointer; 
+}
+

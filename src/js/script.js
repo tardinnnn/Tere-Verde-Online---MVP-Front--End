@@ -32,8 +32,8 @@ function loadSlide() {
     imgEl.src = currentPark.image; 
 }
 
-
 document.getElementById("nextBtn").addEventListener("click", () => {
+
     index = (index + 1) % parks.length;
     loadSlide();
 });
