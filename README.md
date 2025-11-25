@@ -1,94 +1,150 @@
-REQUISITOS DA ÁREA RESTRITA
+# Terê Verde Online - MVP grupo
+## Nome dos integrantes;
+- Anizio de Jesus Lemos Junior - 6023937
+- Bruna Oliveira Tardin - 6014773
+- Gabriel Silva Carvalho - 6015152
+- Guilherme Xavier Nogueira - 6014941
+- João Pedro de Carvalho Dias - 6015617
+- João Vitor Araújo Cibrão - 6010097
 
-1. Telas da Área Administrativa
-● Tela de Login / Página inicial administrativa
-● Tela de Gerenciamento de Atrativos (Listagem)
-● Tela de Cadastro e Edição de Atrativos
 
-2. Requisitos Funcionais (RF)
 
-RF01 - Autenticação do Administrador
-● Prioridade: ALTA
-● O sistema deve permitir login com usuário e senha válidos para acesso à área
-restrita.
+# Situação Problema
+- Circuito Terê Verde: Plataforma Digital para Consulta de Biodiversidade, Trilhas e Eventos nos Parques de Teresópolis.
 
-RF02 - Controle de Acesso
-● Prioridade: ALTA
-● A área administrativa e suas funcionalidades só podem ser acessadas após a
-autenticação (Login).
 
-RF03 - Visualização da Lista de Atrativos
-● Prioridade: ALTA
-● Exibir uma tabela contendo os atrativos cadastrados com as colunas: Nome,
-Localização, Nível de Dificuldade, Status (Aberto/Fechado) e botões de Ação
-(Editar/Excluir).
 
-RF04 - Cadastro de Novo Atrativo
-● Prioridade: ALTA
-● O sistema deve permitir cadastrar um novo atrativo com os seguintes campos
-simples:
-○ Nome do Atrativo (Texto)
-○ Horário de Funcionamento (Texto. Ex: "08h às 17h")
-○ Localização (Texto)
-○ Nível de Dificuldade (Seleção: Leve, Médio ou Difícil)
-○ Situação Atual (Seleção: Aberto ou Fechado/Manutenção)
-○ Imagem (Upload ou Link)
-○ Descrição (Texto)
+# Tecnologias utilizadas;
+- HTML – Utilizado para criar a estrutura e o conteúdo principal das páginas do site, organizando elementos como textos, botões, menus e seções.
 
-RF05 - Edição de Atrativo
-● Prioridade: ALTA
-● Permitir alterar todas as informações de um atrativo já existente (incluindo mudar a
-Situação de "Aberto" para "Fechado").
+- CSS – Responsável pelo design e apresentação visual do site, controlando cores, fontes, espaçamento, layout e responsividade para diferentes telas.
 
-RF06 - Exclusão de Atrativo
-● Prioridade: MÉDIA
-● Permitir excluir um atrativo da listagem, com uma mensagem de confirmação
-simples antes de apagar.
+- JavaScript – Linguagem utilizada para adicionar funcionalidades interativas, como validação de formulários, navegação dinâmica e atualização de elementos na página.
 
-RF07 - Salvamento de Dados
-● Prioridade: ALTA
-● Ao clicar em "Salvar" ou "Atualizar", o sistema deve gravar as informações no banco
-de dados (ou LocalStorage para o MVP) e retornar para a lista.
+- GitHub – Plataforma utilizada como repositório central do projeto, permitindo controle de versão, armazenamento do código e colaboração no desenvolvimento.
 
-RF08 - Exibição Pública da Situação
-● Prioridade: ALTA
-● A página pública (Home) deve ler o status cadastrado aqui (Aberto/Fechado) e exibir
-para o visitante se a trilha está disponível.
 
-RF09 - Logout
-● Prioridade: BAIXA
-● Permitir que o administrador saia da área restrita, retornando para a tela de login.
 
-3. Requisitos Não Funcionais (RNF)
+# Instruções para excutar/abrir o MVP ;
+. Para ter acesso ao site, o usuário deve abrir o link fornecido no repositório ou enviado junto ao projeto. Basta clicar no link e o navegador irá carregar a página automaticamente, sem necessidade de instalação ou configuração adicional.
 
-RNF01 - Usabilidade
-● Prioridade: MÉDIA
-● Interface simples e intuitiva, com botões claros para "Novo Cadastro", "Salvar" e
-"Excluir".
+https://tardinnnn.github.io/Tere-Verde-Online---MVP-Front--End/index.html
 
-RNF02 - Compatibilidade
-● Prioridade: ALTA
-● O sistema deve funcionar corretamente nos navegadores modernos (Chrome,
-Firefox, Edge).
 
-RNF03 - Responsividade
-● Prioridade: MÉDIA
-● A tabela de listagem e o formulário devem se ajustar para não "quebrar" em telas
-menores (ajuste básico).
+# Informações adicionais necessárias;
+- O projeto visa facilitar o acesso a informações oficiais sobre áreas de preservação ambiental do município de Teresópolis, contribuindo para a educação ambiental, segurança dos visitantes e fortalecimento do turismo ecológico local.
 
-RNF04 - Desempenho
-● Prioridade: BAIXA
-● A listagem dos atrativos deve carregar rapidamente (até 2 segundos).
+- A plataforma contribui diretamente para a comunidade ao fomentar o turismo sustentável, permitindo que visitantes explorem os parques de forma consciente, ao mesmo tempo em que fortalece a divulgação do patrimônio natural do município.
 
-RNF05 - Consistência Visual
-● Prioridade: MÉDIA
-● Seguir as cores e fontes definidas no padrão visual do projeto (Terê Verde Online).
+- O sistema foi projetado para dois perfis principais:
+Visitantes: buscam informações confiáveis e atualizadas sobre trilhas, biodiversidade e eventos.
+Administradores: responsáveis por publicar e atualizar os dados exibidos no site.
 
-RNF06 - Armazenamento (MVP)
-● Prioridade: ALTA
-● Para fins de MVP acadêmico, os dados podem ser armazenados temporariamente
-(LocalStorage ou JSON Server) se não houver Backend completo.
+6-Informações de qual mvp definido:
+### O que o MVP entrega:
+- Página web com informações turísticas sobre parques, trilhas e biodiversidade.
 
-RNF07 - Segurança Básica
-● Prioridade: ALTA
-● O campo de senha no login deve ocultar os caracteres digitados.
+- Interface simples e clara para navegação do usuário.
+
+- Área administrativa para atualização de conteúdo.
+
+- Acesso online via link, sem necessidade de instalação.
+
+### O que ele ainda não entrega (futuro):
+- Geolocalização em tempo real.
+
+- Integração com mapas dinâmicos.
+
+- Cadastro de visitantes.
+
+- Sistema completo de avaliação de trilhas.
+
+- Integração com APIs de clima.
+
+
+
+# Objetivos e benefícios do produto;
+### Objetivo:
+- Centralizar informações ambientais e turísticas dos parques de Teresópolis, reunindo dados de trilhas, cachoeiras, pontos de interesse, biodiversidade e eventos em uma única plataforma acessível ao público.
+
+- Facilitar o planejamento de visitas aos parques, permitindo que turistas e moradores consultem horários de funcionamento, condições de trilhas, novidades e atualizações antes de se deslocarem.
+
+- Fortalecer o turismo ecológico e consciente, incentivando a exploração das áreas naturais de forma segura, organizada e alinhada aos princípios de preservação ambiental.
+
+- Disponibilizar um canal digital de gestão para administradores, permitindo atualização rápida e simples das informações exibidas ao público.
+
+### Benefícios:
+- Maior segurança no planejamento das visitas, com informações atualizadas sobre trilhas, eventos e condições do parque.
+
+- Acesso rápido e fácil a mapas, rotas e descrições de pontos turísticos, reduzindo a necessidade de busca em múltiplas fontes.
+
+- Experiência mais rica de ecoturismo, valorizando a biodiversidade e aumentando o envolvimento com o ambiente local.
+
+- Maior atratividade turística para Teresópolis, fortalecendo a economia envolvendo guias, hospedagens, restaurantes e serviços.
+
+- Fortalecimento da Educação Ambiental, promovendo conhecimento sobre fauna, flora e preservação.
+
+- Valorização da identidade ecológica do município, reforçando seu posicionamento como destino de referência em montanhismo e ecoturismo.
+
+
+
+# Público alvo;
+- Turistas e visitantes que desejam conhecer Teresópolis.
+- Moradores de Teresópolis que frequentam os parques.
+- Praticantes de Ecoturismo e Aventura que praticam Montanhismo, trilheiros, escaladores, ciclistas e observadores de animais.
+
+
+
+# Dores do público alvo
+- Dificuldade em encontrar informações organizadas sobre trilhas, cachoeiras e atrativos naturais.
+
+- Falta de dados atualizados sobre horários, funcionamento, acessibilidade e restrições temporárias.
+
+- Perda de tempo procurando informações em sites diferentes ou desatualizados.
+
+- Insegurança por não saber nível de dificuldade das trilhas, tempo médio, exigências e riscos.
+
+- Falta de recursos digitais para planejamento de viagens e passeios.
+
+- Necessidade de uma plataforma central para acompanhar novidades, eventos e avisos oficiais dos parques.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
