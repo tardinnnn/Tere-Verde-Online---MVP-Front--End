@@ -1,143 +1,151 @@
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
 }
 
-body {
-    background-color: #eaffea;
+body{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: white;
 }
 
-.container {
+.caixa-rolagem{
     width: 100%;
+    height: 400px;
+    overflow-y: scroll;
 }
-
 
 .navbar-container {
-    width: 100%;
-    background-color: #12531a;
-    position: fixed;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
-}
-
-nav {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 25px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    width: 8vw;
-    mix-blend-mode: screen;
-}
-
-h2 {
-    color: white;
-    font-size: 3vw;
+  width: 100%;                    
+  background-color: #1a6b24;      
+  position: fixed;            
+  top: 0;                       
+  z-index: 500;                 
+  border-bottom: 1px solid #eee;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.2); 
 }
 
 .navbar-items {
     list-style: none;
+    padding: 0; 
+    margin: 0;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+nav {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center; 
+    padding: 25px 25px; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+.logo{
+    width: 8vw;
+    height: auto;
+    mix-blend-mode: screen;
+
 }
 
-.home-button {
-    background-color: #28a745;
+h2{
     color: white;
-    padding: 12px 20px;
-    border-radius: 6px;
-    text-decoration: none;
+    padding: 0px 50px 0px 0px ;
+    margin: 0;
+    font-size: 3vw;
 }
 
-.home-button:hover {
+
+.home-button{
+    background-color: #28a745;
+    color: white; 
+    text-decoration: none; 
+    padding: 15px 25px; 
+    display: inline-block; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease;
+    opacity: 70%;
+}
+
+.home-button:hover{
     background-color: #1e7e34;
 }
 
-
-main {
-    padding-top: 180px;
-    padding-bottom: 80px;
-}
-
-
 .eventos-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-
-.evento-card {
-    background: white;
-    border-radius: 12px;
-    padding: 20px;
-    margin-bottom: 30px;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
-    align-items: flex-start;
+    padding: 10px;
 }
 
-
-
-.evento-card h3 {
-    font-size: 1.6rem;
-    margin-bottom: 5px;
-    color: #0f3d1a;
-}
-
-
-.evento-card p {
-    font-size: 1rem;
-    margin: 3px 0;
-}
-
-
-.evento-card .descricao {
-    margin-top: 10px;
-    color: #444;
-}
-
-
-
-.btn-excluir {
-    padding: 8px 12px;
-    border: none;
-    margin-right: 10px;
-    font-weight: bold;
+/* ===== CARD DE EVENTO ===== */
+.evento-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 160px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: 0.3s ease-in-out;
     cursor: pointer;
-    border-radius: 5px;
 }
 
-
-
-.btn-excluir {
-    background-color: #e63946;
-    color: white;
+.evento-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
 }
 
-.btn-excluir:hover {
-    background-color: #b01f26;
+.evento-img {
+    width: 150%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 40px;
+    margin-bottom: 40px;
+    object-fit: cover;
+
 }
 
+.evento-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #0f6e44;
+}
 
+.evento-data {
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #365e4b;
+}
+
+.evento-local {
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+    opacity: 0.8;
+}
+
+.evento-botao {
+    display: inline-block;
+    padding: 10px 16px;
+    background: #0f6e44;
+    color: #fff;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.evento-botao:hover {
+    background: #128f5a;
+}
+
+/* ===== FOOTER ===== */
 footer {
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-    background-color: #12531a;
-    color: white;
+    background: #0f6e44;
+    color: #fff;
+    padding: 20px;
+    margin-top: 40px;
     text-align: center;
-    padding: 12px 0;
-}
-
-@media (max-width: 600px) {
-    h2{
-        font-size: 20px;
-    }
 }
