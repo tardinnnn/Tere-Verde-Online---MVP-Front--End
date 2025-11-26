@@ -1,4 +1,4 @@
-const eventos = [
+const eventosFixos = [
     {
         titulo: "Trilha no Parque Nacional",
         data: "12/12/2025",
@@ -22,17 +22,66 @@ const eventos = [
     },
 ];
 
+const eventosCadastrados = JSON.parse(localStorage.getItem("eventos")) || [];
+
+const todosEventos = [...eventosCadastrados, ...eventosFixos];
+
+
 const lista = document.getElementById("lista-eventos");
 
-eventos.forEach(ev => {
-    const card = `
+function criarCardEvento(evento) {
+    const titulo = evento.titulo;
+    const local = evento.local;
+    
+    const dataCompleta = evento.horario 
+        ? `📅 ${evento.data} às ${evento.horario}`
+        : `📅 ${evento.data}`;
+
+    const imagemUrl = evento.imagem || "src/img/default.jpg"; 
+    const linkUrl = evento.link || "#";
+
+    let botaoExcluir = '';
+    if (evento.id) {
+        botaoExcluir = `<button class="excluir-btn" data-id="${evento.id}">Excluir</button>`;
+    }
+
+    return `
         <div class="evento-card">
-            <img src="${ev.imagem}" class="evento-img" alt="Imagem do evento">
-            <h3 class="evento-title">${ev.titulo}</h3>
-            <p class="evento-data">📅 ${ev.data}</p>
-            <p class="evento-local">📍 ${ev.local}</p>
-            <a href="${ev.link}" class="evento-botao">Saiba mais</a>
+            <img src="${imagemUrl}" class="evento-img" alt="Imagem do evento">
+            <h3 class="evento-title">${titulo}</h3>
+            <p class="evento-data">${dataCompleta}</p>
+            <p class="evento-local">📍 ${local}</p>
+            <div class="card-actions">
+                <a href="${linkUrl}" class="evento-botao">Saiba mais</a>
+                ${botaoExcluir} 
+            </div>
         </div>
     `;
-    lista.innerHTML += card;
+}
+
+todosEventos.forEach(ev => {
+    lista.innerHTML += criarCardEvento(ev);
+});
+
+
+function excluirEvento(id) {
+    if (!confirm("Tem certeza que deseja excluir este evento?")) {
+        return;
+    }
+    
+    let eventos = JSON.parse(localStorage.getItem("eventos")) || [];
+    
+    const idParaExcluir = parseInt(id);
+    const novaLista = eventos.filter(ev => ev.id !== idParaExcluir);
+    
+    localStorage.setItem("eventos", JSON.stringify(novaLista));
+    
+    window.location.reload();
+}
+
+document.addEventListener('click', function(e) {
+    if (e.target.classList.contains('excluir-btn')) {
+        const id = e.target.getAttribute('data-id');
+        excluirEvento(id);
+    }
 });

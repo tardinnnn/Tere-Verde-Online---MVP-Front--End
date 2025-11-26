@@ -1,3 +1,13 @@
+function salvarEventoERedirecionar(novoEvento) {
+    let eventos = JSON.parse(localStorage.getItem("eventos")) || [];
+    eventos.push(novoEvento);
+    localStorage.setItem("eventos", JSON.stringify(eventos));
+
+    alert("Evento publicado com sucesso!");
+    window.location.href = "eventos.html"; 
+}
+
+
 document.getElementById("event-form").addEventListener("submit", function(event) {
     event.preventDefault(); 
 
@@ -12,9 +22,8 @@ document.getElementById("event-form").addEventListener("submit", function(event)
 
     const local = document.getElementById("local-atividade").value;
     const descricao = document.getElementById("descricao").value;
-
-
-    const novoEvento = {
+    
+    const novoEventoBase = {
         id: Date.now(), 
         titulo: titulo,
         data: `${dd}/${mm}/${yyyy}`,
@@ -24,11 +33,25 @@ document.getElementById("event-form").addEventListener("submit", function(event)
     };
 
 
-    let eventos = JSON.parse(localStorage.getItem("eventos")) || [];
-    eventos.push(novoEvento);
-    localStorage.setItem("eventos", JSON.stringify(eventos));
+    const imagemInput = document.getElementById("imagem-upload");
+    const imagemFile = imagemInput.files[0]; 
 
-    alert("Evento publicado com sucesso!");
-    window.location.href = "eventos.html"; 
+    if (imagemFile) {
+        const reader = new FileReader();
+        
+        reader.onload = function(e) {
+            const imagemBase64 = e.target.result; 
+            const novoEventoComImagem = { 
+                ...novoEventoBase,
+                imagem: imagemBase64 
+            };
+
+            salvarEventoERedirecionar(novoEventoComImagem);
+        };
+        
+        reader.readAsDataURL(imagemFile); 
+        
+    } else {
+        salvarEventoERedirecionar(novoEventoBase);
+    }
 });
-
