@@ -1,3 +1,7 @@
+function estaLogado() {
+    return sessionStorage.getItem("logado") === "true"; 
+}
+
 const eventosFixos = [
     {
         titulo: "Trilha no Parque Nacional",
@@ -30,18 +34,15 @@ const todosEventos = [...eventosCadastrados, ...eventosFixos];
 const lista = document.getElementById("lista-eventos");
 
 function criarCardEvento(evento) {
+    
     const titulo = evento.titulo;
     const local = evento.local;
-    
-    const dataCompleta = evento.horario 
-        ? `📅 ${evento.data} às ${evento.horario}`
-        : `📅 ${evento.data}`;
-
+    const dataCompleta = evento.horario ? `📅 ${evento.data} às ${evento.horario}` : `📅 ${evento.data}`;
     const imagemUrl = evento.imagem || "src/img/default.jpg"; 
     const linkUrl = evento.link || "#";
 
     let botaoExcluir = '';
-    if (evento.id) {
+    if (evento.id && estaLogado()) { 
         botaoExcluir = `<button class="excluir-btn" data-id="${evento.id}">Excluir</button>`;
     }
 
@@ -65,7 +66,12 @@ todosEventos.forEach(ev => {
 
 
 function excluirEvento(id) {
-    if (!confirm("Tem certeza que deseja excluir este evento?")) {
+    if (!estaLogado()) {
+        alert("Acesso negado. Você precisa estar logado para excluir eventos.");
+        return; 
+    }
+
+    if (!confirm("Tem certeza que deseja excluir este evento? Esta ação é permanente.")) {
         return;
     }
     
