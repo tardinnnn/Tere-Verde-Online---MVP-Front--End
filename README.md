@@ -1,6 +1,5 @@
 # Terê Verde Online - MVP grupo
 ## Nome dos integrantes;
-- Anizio de Jesus Lemos Junior - 6023937
 - Bruna Oliveira Tardin - 6014773
 - Gabriel Silva Carvalho - 6015152
 - Guilherme Xavier Nogueira - 6014941
