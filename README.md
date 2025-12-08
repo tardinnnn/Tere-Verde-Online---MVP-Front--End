@@ -9,7 +9,9 @@
 
 
 # Situação Problema
-- Circuito Terê Verde: Plataforma Digital para Consulta de Biodiversidade, Trilhas e Eventos nos Parques de Teresópolis.
+- As informações sobre trilhas, parques e biodiversidade de Teresópolis estão espalhadas, muitas vezes desatualizadas e sem padronização. Isso dificulta o planejamento dos visitantes e prejudica a divulgação dos atrativos naturais. Além disso, administradores não possuem um canal simples para publicar atualizações e eventos.
+
+O MVP Circuito Terê Verde surge para centralizar essas informações em uma plataforma única, acessível e fácil de atualizar.
 
 
 
@@ -39,7 +41,10 @@ https://tardinnnn.github.io/Tere-Verde-Online---MVP-Front--End/index.html
 Visitantes: buscam informações confiáveis e atualizadas sobre trilhas, biodiversidade e eventos.
 Administradores: responsáveis por publicar e atualizar os dados exibidos no site.
 
-6-Informações de qual mvp definido:
+# MVP Definido:
+- O MVP (Minimum Viable Product) definido para o "Terê Verde Online" é um MVP protótipo, composto por um website front-end.
+
+
 ### O que o MVP entrega:
 - Página web com informações turísticas sobre parques, trilhas e biodiversidade.
 
@@ -106,6 +111,7 @@ Administradores: responsáveis por publicar e atualizar os dados exibidos no sit
 - Falta de recursos digitais para planejamento de viagens e passeios.
 
 - Necessidade de uma plataforma central para acompanhar novidades, eventos e avisos oficiais dos parques.
+
 
 
 
