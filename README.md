@@ -11,7 +11,7 @@
 # Situação Problema
 - As informações sobre trilhas, parques e biodiversidade de Teresópolis estão espalhadas, muitas vezes desatualizadas e sem padronização. Isso dificulta o planejamento dos visitantes e prejudica a divulgação dos atrativos naturais. Além disso, administradores não possuem um canal simples para publicar atualizações e eventos.
 
-O MVP Circuito Terê Verde surge para centralizar essas informações em uma plataforma única, acessível e fácil de atualizar.
+- O MVP Circuito Terê Verde surge para centralizar essas informações em uma plataforma única, acessível e fácil de atualizar.
 
 
 
@@ -111,6 +111,7 @@ Administradores: responsáveis por publicar e atualizar os dados exibidos no sit
 - Falta de recursos digitais para planejamento de viagens e passeios.
 
 - Necessidade de uma plataforma central para acompanhar novidades, eventos e avisos oficiais dos parques.
+
 
 
 
