@@ -11,7 +11,7 @@
 
 
 
-# Tecnologias utilizadas;
+# Tecnologias utilizadas
 - HTML – Utilizado para criar a estrutura e o conteúdo principal das páginas do site, organizando elementos como textos, botões, menus e seções.
 
 - CSS – Responsável pelo design e apresentação visual do site, controlando cores, fontes, espaçamento, layout e responsividade para diferentes telas.
