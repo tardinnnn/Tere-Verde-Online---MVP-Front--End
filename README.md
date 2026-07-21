@@ -1,10 +1,6 @@
-# Terê Verde Online - MVP grupo
-## Nome dos integrantes;
+# Terê Verde Online - MVP 
+
 - Bruna Oliveira Tardin - 6014773
-- Gabriel Silva Carvalho - 6015152
-- Guilherme Xavier Nogueira - 6014941
-- João Pedro de Carvalho Dias - 6015617
-- João Vitor Araújo Cibrão - 6010097
 
 
 
