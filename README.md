@@ -1,6 +1,6 @@
 # Terê Verde Online - MVP 
 
-- Bruna Oliveira Tardin - 6014773
+
 
 
 
